@@ -12,9 +12,6 @@ const PRODUCT:Product[] = [
       info: "The Dell Venue is a line of Android smartphones and tablets manufactured by Dell. The first Dell Venue was released for both T-Mobile and AT&T in the United States, and for KT in South Korea. It was the second Dell smartphone to be released in the US and features the Dell Stage UI also found on the Dell Streak line of tablets." }
   ];
 
-
-
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [ProductService]
@@ -31,17 +28,6 @@ const PRODUCT:Product[] = [
   });
 
   }));
-
-it('should return single data for detail page', inject([ProductService], (service: ProductService) => {
-    return service.getProducts(1).then( data => {
-      expect(data).toEqual(PRODUCTS[0]);
-  });
-
-  }));
-
-
-
-
 
 
 });

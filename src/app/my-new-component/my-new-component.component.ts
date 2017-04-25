@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {AuthenticationService, User} from '../my-new-service.service';
 
 @Component({
