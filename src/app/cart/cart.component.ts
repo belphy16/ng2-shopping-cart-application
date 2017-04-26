@@ -25,7 +25,7 @@ export class CartComponent {
   }
 
   checkout() {
-    alert('Sorry! Checkout will be coming soon!')
+    //alert('Sorry! Checkout will be coming soon!')
   }
 
     getTotalPrice() {

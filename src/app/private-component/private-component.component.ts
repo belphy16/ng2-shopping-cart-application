@@ -4,6 +4,7 @@ import { Product } from '../Product';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
     selector: 'product',

@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AuthenticationService } from './my-new-service.service';
+import { AuthenticationService} from './my-new-service.service';
 
 describe('MyNewServiceService', () => {
   beforeEach(() => {

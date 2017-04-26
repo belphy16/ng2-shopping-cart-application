@@ -23,11 +23,12 @@ import { ProductService } from './product.service';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule,    
     HttpModule,
     routing
   ],
+  exports:[NavbarComponent],
   providers: [ProductService],
   bootstrap: [AppComponent]
 })
