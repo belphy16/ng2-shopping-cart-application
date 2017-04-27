@@ -74,16 +74,6 @@ it('should call the login method inside the AuthenticationService', () => {
       expect(authService.login).toHaveBeenCalledTimes(1);
     });
 
-    it('should call the login method inside the AuthenticationService and returns true', () => {
-      spyOn(authService, 'login').and.callFake(function(params) 
-      {
-        return 1001;
-      });
-
-     component.login();
-      expect(authService.login).toEqual(1001);
-
-    });
 
 });
 

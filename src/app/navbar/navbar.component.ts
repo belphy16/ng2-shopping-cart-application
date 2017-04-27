@@ -38,7 +38,6 @@ logout() {
         this._service.logout();
     }
 
-    
 
   ngOnInit() {
     // Subscribe to the observable to receive updates on the new products added to the cart 
