@@ -1,4 +1,5 @@
 import { ProductDetailComponent } from './product-detail.component';
+import { ProductComponent } from '../private-component/private-component.component';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product.service';
 import { MockBackend } from '@angular/http/testing';
@@ -15,6 +16,7 @@ let MockProduct: Product = <Product>{id: 1, name: 'Superman',src: 'new',info: 'h
 
 describe('ProductDetailComponent', () => {
   let component: ProductDetailComponent;
+  let productComponent: ProductComponent;
   let fixture: ComponentFixture<ProductDetailComponent>;
   let productService: ProductService;
   let activatedRoute: ActivatedRoute;
@@ -33,6 +35,7 @@ providers: [
       ],
       declarations: [
         ProductDetailComponent,
+        ProductComponent,
         NavbarComponent
       ],
       imports: [
@@ -50,6 +53,31 @@ providers: [
     productService = TestBed.get(ProductService);
     activatedRoute = TestBed.get(ActivatedRoute);
   });
+
+
+it('should call product detail component init function', () => {
+spyOn(component, 'ngOnInit');
+component.ngOnInit();
+
+expect(component.ngOnInit).toHaveBeenCalled();
+expect(component.ngOnInit).toHaveBeenCalledTimes(1);
+});
+
+
+it('should call the logout method through click event via anchor tag', async(() => {
+spyOn(component, 'addToCart');
+
+let button = fixture.debugElement.nativeElement.querySelector('button');
+button.click();
+expect(button).toBeTruthy();
+//fixture.whenStable().then(() => {
+//expect(component.addToCart).toHaveBeenCalled();
+//})
+}));
+
+
+
+
 
 
   it('should create', () => {
